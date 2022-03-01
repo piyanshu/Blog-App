@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/', function(req, res){
     res.send('Hello');
-})
+});
 
 app.listen(port, function(req, res){
     console.log(`Server is running on ${port}`);
