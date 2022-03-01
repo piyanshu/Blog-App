@@ -6,6 +6,7 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 const db = require('./config/mongoose');
+const blog = require('./models/blog');
 
 app.get('/', function(req, res){
     return res.render('index');
