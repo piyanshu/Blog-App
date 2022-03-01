@@ -11,6 +11,15 @@ const blog = require('./models/blog');
 app.get('/', function(req, res){
     return res.render('index');
 });
+app.post('/', function(req, res){
+    blog.create(req.body, function(err, blog){
+        if(err){
+            console.log('error in creating blog');
+        }else{
+            return res.redirect('back');
+        }
+    });
+});
 
 app.listen(port, function(req, res){
     console.log(`Server is running on ${port}`);
