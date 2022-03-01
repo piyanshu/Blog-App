@@ -7,7 +7,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/', function(req, res){
-    res.send('Hello');
+    return res.render('index');
 });
 
 app.listen(port, function(req, res){
