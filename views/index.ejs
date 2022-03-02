@@ -28,5 +28,13 @@
             <a href=""class="color">New Post</a>
         </div>
     </nav>
+    <% blogs.forEach(function(blog){ %>
+        <div>
+            <p><%= blog.title %></p>
+            <img src="<%= blog.imgurl %>" alt="error in reloading image">
+            <p><%= blog.description %> </p>
+        </div>
+    <% }) %>
+    
 </body>
 </html>

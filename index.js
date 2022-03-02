@@ -11,7 +11,16 @@ const db = require('./config/mongoose');
 const blog = require('./models/blog');
 
 app.get('/', function(req, res){
-    return res.render('index');
+    blog.find({}, function(err, blogs){
+        if(err){
+            console.log('Error in finding post');
+        }else{
+            // console.log(blogs);
+            return res.render('index', {
+                blogs: blogs
+            });
+        }
+    });
 });
 app.post('/', function(req, res){
     blog.create(req.body, function(err, blog){
