@@ -1,33 +1,6 @@
-<!-- <form action="/"method="post">
-    <div>
-        <label for="title">Title</label><br>
-        <input type="text"name="title"placeholder="Title"autocomplete="off" required>
-    </div>
-    <div>
-        <label for="imgurl">Image URL</label><br>
-        <input type="text"name="imgurl"placeholder="URL"autocomplete="off" required>
-    </div>
-    <div>
-        <label for="description">Description</label><br>
-        <input type="text"name="description"placeholder="description"autocomplete="off" required>
-    </div>
-    <button type="submit">Submit</button>
-</form> -->
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="css/style.css">
-    <title>Blog App</title>
-</head>
-<body>
-    <nav id="nav-bar">
-        <div id="nav-content">
-            <span class="color">Blog App</span>
-            <a href=""class="color">Home</a>
-            <a href=""class="color">New Post</a>
-        </div>
-    </nav>
+<%- include('./partials/navbar') %>
+
     <% blogs.forEach(function(blog){ %>
         <div>
             <p><%= blog.title %></p>
@@ -36,5 +9,4 @@
         </div>
     <% }) %>
     
-</body>
-</html>
+<%- include('./partials/footer') %>
