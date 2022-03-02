@@ -22,12 +22,15 @@ app.get('/', function(req, res){
         }
     });
 });
-app.post('/', function(req, res){
+app.get('/new', function(req, res){
+    return res.render('newPost');
+})
+app.post('/new-post', function(req, res){
     blog.create(req.body, function(err, blog){
         if(err){
             console.log('error in creating blog');
         }else{
-            return res.redirect('back');
+            return res.redirect('/');
         }
     });
 });
