@@ -5,6 +5,8 @@ const port = 8000;
 const app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static('public'))
+
 const db = require('./config/mongoose');
 const blog = require('./models/blog');
 
