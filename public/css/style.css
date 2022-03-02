@@ -1,7 +1,7 @@
 body{
     margin:0px;
     padding:0px;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-family: sans-serif;
     
 }
@@ -10,15 +10,21 @@ body{
     text-decoration: none;
 }
 #nav-bar{
-    height: 6vh;
+    height: 5vh;
     width: 100vw;
     background-color: black;
 }
 #nav-content{
     height:inherit;
-    width:20rem;
+    width:17rem;
     margin-left: 15rem;
     display:flex;
     justify-content: space-between;
     align-items: center;
+}
+.container{
+    height:15rem;
+    width:40rem;
+    border:1px solid black;
+    margin:0px auto;
 }

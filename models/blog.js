@@ -12,6 +12,8 @@ const blogSchema = new mongoose.Schema({
         type: String,
         required: true
     }
+},{
+    timestamps:true
 });
 const blogApp = mongoose.model('blog_app', blogSchema);
 module.exports = blogApp;

@@ -15,7 +15,6 @@ app.get('/', function(req, res){
         if(err){
             console.log('Error in finding post');
         }else{
-            // console.log(blogs);
             return res.render('index', {
                 blogs: blogs
             });
