@@ -23,8 +23,15 @@ body{
     align-items: center;
 }
 .container{
-    height:15rem;
+    height:auto;
     width:40rem;
     border:1px solid black;
-    margin:0px auto;
+    margin:2rem auto 0px;
+}
+.container h1{
+    margin:1rem;
+}
+.container img{
+    display:block;
+    margin: 1rem auto 0px;
 }
