@@ -6,7 +6,10 @@
             <h1><%= blog.title %></h1>
             <img src="<%= blog.imgurl %>" alt="error in reloading image">
             <div><%= blog.description %> </div>
+            <a href="/blog/edit?id=<%= blog.id %>">
+                <button>Edit</button>
+            </a>
         </div>
     <% }) %>
-    
+
 <%- include('./partials/footer') %>

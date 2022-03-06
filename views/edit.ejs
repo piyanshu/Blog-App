@@ -3,15 +3,15 @@
 <form action="/blogs"method="post">
     <div>
         <label for="title">Title</label><br>
-        <input type="text"name="title"placeholder="Title"autocomplete="off" required>
+        <input type="text"name="title"value="<%= blog.title %>"placeholder="Title"autocomplete="off" required>
     </div>
     <div>
         <label for="imgurl">Image URL</label><br>
-        <input type="text"name="imgurl"placeholder="URL"autocomplete="off" required>
+        <input type="text"name="imgurl"value="<%= blog.imgurl %>"placeholder="URL"autocomplete="off" required>
     </div>
     <div>
         <label for="description">Description</label><br>
-        <input type="text"name="description"placeholder="description"autocomplete="off" required>
+        <input type="text"name="description"value="<%= blog.description %>"placeholder="description"autocomplete="off" required>
     </div>
     <button type="submit">Submit</button>
 </form>
