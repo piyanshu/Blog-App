@@ -2,20 +2,16 @@
 <%- include('./partials/navbar') %>
     <h1 id="heading">Blog App</h1>
     <% blogs.forEach(function(blog){ %>
-        <div class="container">
+        <div class="main-container">
             <div>
                 <img src="<%= blog.imgurl %>" alt="error in reloading image">
             </div>
-            <div id="small-container">
+            <div id="main-small-container">
                 <div id="title"><%= blog.title %></div>          
                 <div id="desc"><%= blog.description.substring(0, 100) %>... </div>
                 <a href="/show/<%= blog.id %>">
-                    <button type="submit">Read More</button>
+                    <button class="btn"type="submit">Read More</button>
                 </a>
-                <!-- <a href="/blog/edit?id=<%= blog.id %>">
-                    Edit
-                </a>
-                <a href="/blog/delete?id=<%= blog.id %>">Delete</a> -->
             </div>
         </div>
     <% }) %>

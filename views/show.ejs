@@ -1,0 +1,20 @@
+
+<%- include('./partials/navbar') %>
+
+    <div class="show-container">
+        <div id="title"><%= blog.title %></div>
+        <div>
+            <img src="<%= blog.imgurl %>" alt="error in reloading image">
+        </div>
+        <div id="show-small-container">  
+            <div id="desc"><%= blog.description %></div>
+            <a href="/blog/edit?id=<%= blog.id %>">
+                <button class="btn"type="submit">Edit</button>
+            </a>
+            <a href="/blog/delete?id=<%= blog.id %>">
+                <button class="btn"type="submit">Delete</button>
+            </a>
+        </div>
+    </div>
+
+<%- include('./partials/footer') %>
