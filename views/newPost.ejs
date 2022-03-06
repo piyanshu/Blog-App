@@ -1,19 +1,22 @@
 <%- include('./partials/navbar') %>
 
-<form action="/blogs"method="post">
-    <div>
-        <label for="title">Title</label><br>
-        <input type="text"name="title"placeholder="Title"autocomplete="off" required>
-    </div>
-    <div>
-        <label for="imgurl">Image URL</label><br>
-        <input type="text"name="imgurl"placeholder="URL"autocomplete="off" required>
-    </div>
-    <div>
-        <label for="description">Description</label><br>
-        <input type="text"name="description"placeholder="description"autocomplete="off" required>
-    </div>
-    <button type="submit">Submit</button>
-</form>
+<div id="form">
+    <form action="/blogs"method="post">
+        <span>New Blog</span>
+        <div class="input-fields">
+            <label for="title">Title</label><br>
+            <input type="text"name="title"placeholder="Title"autocomplete="off" required>
+        </div>
+        <div  class="input-fields">
+            <label for="imgurl">Image URL</label><br>
+            <input type="text"name="imgurl"placeholder="URL"autocomplete="off" required>
+        </div>
+        <div class="input-fields">
+            <label for="description">Description</label><br>
+            <textarea name="description"cols="106" rows="10"autocomplete="off"required></textarea>
+        </div>
+        <button id="btn"type="submit">Submit</button>
+    </form>
+</div>
 
 <%- include('./partials/footer') %>
