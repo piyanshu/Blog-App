@@ -61,7 +61,15 @@ app.get('/blog/delete', function(req, res){
         }
     });
 });
-
+app.get('/show/:id', function(req, res){
+    blog.find(req.params.id, function(err, blog){
+        if(err){
+            console.log('error in finding the blog');
+        }else{
+            return res.render('show', {blog: blog});
+        }
+    });
+});
 app.listen(port, function(req, res){
     console.log(`Server is running on ${port}`);
 });
