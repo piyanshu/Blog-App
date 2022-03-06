@@ -25,13 +25,11 @@ app.get('/blogs/new', function(req, res){
     return res.render('newPost');
 });
 app.get('/blog/edit', function(req, res){
-    // console.log(req.query.id);
     blog.findById(req.query.id, function(err, blog){
         if(err){
             console.log('error in finding the blog');
         }
         else{
-            // console.log(blog);
             return res.render('edit', {blog: blog});
         }
     });
@@ -42,6 +40,15 @@ app.post('/blogs', function(req, res){
             console.log('error in creating blog');
         }else{
             return res.redirect('/');
+        }
+    });
+});
+app.get('/blog/delete', function(req, res){
+    blog.findByIdAndDelete(req.query.id, function(err){
+        if(err){
+            console.log('error in finding the blog');
+        }else{
+            return res.redirect('back');
         }
     });
 });
