@@ -1,7 +1,7 @@
 <%- include('./partials/navbar') %>
 
 <div id="form">
-    <form action="/blogs"method="post">
+    <form action="/blogs/edit?id=<%= blog.id %>"method="post">
         <span>New Blog</span>
         <div class="input-fields">
             <label for="title">Title</label><br>

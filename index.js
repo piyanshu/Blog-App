@@ -43,6 +43,15 @@ app.post('/blogs', function(req, res){
         }
     });
 });
+app.post('/blogs/edit', function(req, res){
+    blog.findByIdAndUpdate(req.query.id, req.body, function(err, updatedblog){
+        if(err){
+            console.log('error in updating a blog');
+        }else{
+            return res.redirect('/');
+        }
+    });
+});
 app.get('/blog/delete', function(req, res){
     blog.findByIdAndDelete(req.query.id, function(err){
         if(err){
