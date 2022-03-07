@@ -19,15 +19,16 @@ body{
 #nav-content{
     height:inherit;
     width:17rem;
-    margin-left: 15rem;
+    margin-left: 10rem;
     display:flex;
     justify-content: space-between;
     align-items: center;
+    /* border: 1px solid white; */
 }
 .main-container{
     border:1px solid grey;
     height:auto;
-    width:35rem;
+    width:40%;
     margin:2rem auto;
     display:flex;
     padding: 1rem;
@@ -65,7 +66,7 @@ body{
 }
 #form{
     height:auto;
-    width:50rem;
+    width:50%;
     border:1px solid black;
     margin:3rem auto;
     padding:1rem 2rem 1rem 1rem;
@@ -87,11 +88,12 @@ body{
 .input-fields textarea{
     margin-top: 0.3rem;
     padding: 0.5rem;
+    width:100%;
 }
 .show-container{
     border:1px solid grey;
     height:auto;
-    width:50rem;
+    width:50%;
     margin:2rem auto;
     padding: 1rem;
     border-radius: 1%;
@@ -102,4 +104,43 @@ body{
 .show-container img{
     display: block;
     margin: 0px auto;
+    width:50%;
+    height:20rem;
+}
+
+/* Making the website responsive */
+@media only screen and (max-width:1400px){
+    .main-container{
+        width:50%;
+    }
+    .show-container{
+        width:60%;
+    }
+}
+@media only screen and (max-width:1200px){
+    .main-container{
+        width:60%;
+    }
+    .show-container{
+        width:70%;
+    }
+    #form{
+        width:70%;
+    }
+}
+@media only screen and (max-width:800px){
+    .main-container{
+        width:70%;
+    }
+    .show-container{
+        width:75%;
+    }
+    .show-container img{
+        height:15rem;
+    }
+}
+@media only screen and (max-width:600px){
+    .show-container img{
+        height:10rem;
+    }
 }

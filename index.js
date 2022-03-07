@@ -53,7 +53,6 @@ app.post('/blogs/edit', function(req, res){
     });
 });
 app.get('/blog/delete', function(req, res){
-    console.log('Hello');
     blog.findByIdAndDelete(req.query.id, function(err){
         if(err){
             console.log('error in finding the blog');
