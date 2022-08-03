@@ -7,10 +7,10 @@ const app = express();
 dotenv.config();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static('public'));
+// app.use(express.static('public'));
 
-const db = require('./config/mongoose');
-const blog = require('./models/blog');
+const db = require('../config/mongoose');
+const blog = require('../models/blog');
 
 app.get('/', function(req, res){
     blog.find({}, function(err, blogs){
