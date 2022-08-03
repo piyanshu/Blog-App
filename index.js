@@ -1,8 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const port = 8000;
+const dotenv = require("dotenv")
 
 const app = express();
+dotenv.config();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('public'));
